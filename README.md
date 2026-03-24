@@ -1,10 +1,12 @@
 Cerevyn project
 
-WrokFlow Diagrams
+WrokFlow Diagrams...
 
 ![image alt](https://github.com/BalaMurali219/cerevyn_project/blob/d775081590241cc2feeb3a35abc8e80ff89422b5/workflow-1.jpeg)
 
-![image alt]()
+![image alt](https://github.com/BalaMurali219/cerevyn_project/blob/2ddba49d58582b0355f23683e7450037c77701da/workflow-2.jpeg)
+
+OutPut :)
 
 ![image alt](https://github.com/BalaMurali219/cerevyn_project/blob/d1e436c7f226f7b1527a00b8e5b80f17abcbcf03/Screenshot%202026-03-24%20214004.png)
 
