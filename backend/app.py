@@ -28,6 +28,10 @@ except Exception as e:
     model, scaler, label_encoders, expected_columns = None, None, None, None
 
 class LeadData(BaseModel):
+    Name: str = "Unknown"
+    Phone: str = "Unknown"
+    Email: str = "Unknown"
+    InterestLevel: str = "Auto Predict"
     Age: float
     Gender: str
     Location: str
@@ -87,9 +91,22 @@ def process_lead(lead: LeadData):
     # Scaling
     X_scaled = scaler.transform(df)
     
-    # Prediction
-    prob = float(model.predict_proba(X_scaled)[0][1])  # Probability of target=1
-    prediction = int(prob > 0.5)
+    # Prediction Configuration based on explicit Interest Level or ML model
+    interest_level = data_dict.get("InterestLevel", "Auto Predict")
+    
+    if interest_level == "High":
+        prob = 0.85
+        prediction = 1
+    elif interest_level == "Medium":
+        prob = 0.55
+        prediction = 1
+    elif interest_level == "Low":
+        prob = 0.20
+        prediction = 0
+    else:
+        # Auto-predict
+        prob = float(model.predict_proba(X_scaled)[0][1])  # Probability of target=1
+        prediction = int(prob > 0.5)
     
     # Workflow Orchestration Engine
     from workflow_engine import WorkflowOrchestrator

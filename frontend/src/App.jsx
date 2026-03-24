@@ -4,6 +4,10 @@ import { submitLead, checkHealth } from './api'
 
 function App() {
   const [leadData, setLeadData] = useState({
+    Name: '',
+    Phone: '',
+    Email: '',
+    InterestLevel: 'Auto Predict',
     Age: 35,
     Gender: 'Female',
     Location: 'Lahore',
@@ -87,6 +91,27 @@ function App() {
         <div className="card form-card">
           <h2>New Lead Entry</h2>
           <form onSubmit={handleSubmit} className="lead-form">
+            <div className="form-group">
+              <label>Name:</label>
+              <input type="text" name="Name" value={leadData.Name} onChange={handleChange} required />
+            </div>
+            <div className="form-group">
+              <label>Phone:</label>
+              <input type="tel" name="Phone" value={leadData.Phone} onChange={handleChange} required />
+            </div>
+            <div className="form-group">
+              <label>Email:</label>
+              <input type="email" name="Email" value={leadData.Email} onChange={handleChange} required />
+            </div>
+            <div className="form-group">
+              <label>Predicted Interest Override:</label>
+              <select name="InterestLevel" value={leadData.InterestLevel} onChange={handleChange}>
+                <option value="Auto Predict">Auto Predict (ML)</option>
+                <option value="High">High Intent</option>
+                <option value="Medium">Medium Intent</option>
+                <option value="Low">Low Intent</option>
+              </select>
+            </div>
             <div className="form-group">
               <label>Age:</label>
               <input type="number" name="Age" value={leadData.Age} onChange={handleChange} required />
