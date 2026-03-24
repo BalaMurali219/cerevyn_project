@@ -6,4 +6,4 @@ Cerevyn project
 
 ![image alt](https://github.com/BalaMurali219/cerevyn_project/blob/fef029fb9dbc75e9049d801824f081b0e46fa287/Screenshot%202026-03-24%20214353.png)
 
-![image alt]()
+![image alt](https://github.com/BalaMurali219/cerevyn_project/blob/c6ef2aae4948821d711ca5ce447777f094d658b4/Screenshot%202026-03-24%20214404.png)
